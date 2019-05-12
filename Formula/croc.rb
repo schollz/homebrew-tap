@@ -4,7 +4,7 @@ class Croc < Formula
   homepage "https://schollz.com/software/croc/"
   url "https://github.com/schollz/croc/releases/download/v6.0.4/croc_6.0.4_macOS-64bit.tar.gz"
   version "6.0.4"
-  sha256 "e9fda54c6f829adb71b13d6800c306c463f342a88a12beadee1dcaf062561ef4"
+  sha256 "8356e4d396eabaf90812dbeefd4b1d4f39cbf788c40cd059aaac88a159189576"
 
   def install
     bin.install "croc"
