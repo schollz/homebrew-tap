@@ -2,9 +2,9 @@
 class Squirrel < Formula
   desc "squirrel downloads URLs to a SQLite database."
   homepage "https://schollz.com/software/squirrel/"
-  url "https://github.com/schollz/squirrel/releases/download/v1.0.5/squirrel_1.0.5_macOS-64bit.tar.gz"
-  version "1.0.5"
-  sha256 "170285465c313a1561529e625a191c954fadeca6de228289ed9089655ad5a9d9"
+  url "https://github.com/schollz/squirrel/releases/download/v1.0.6/squirrel_1.0.6_macOS-64bit.tar.gz"
+  version "1.0.6"
+  sha256 "b8cef0251f2d21c657e0196a83f44df0e9dc2d84a7ecfd8025ea4e7d6910f17b"
 
   def install
     bin.install "squirrel"
