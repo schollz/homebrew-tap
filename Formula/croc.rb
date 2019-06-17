@@ -2,9 +2,9 @@
 class Croc < Formula
   desc "croc is a tool that allows any two computers to simply and securely transfer files and folders."
   homepage "https://schollz.com/software/croc/"
-  url "https://github.com/schollz/croc/releases/download/v6.0.8/croc_6.0.8_macOS-64bit.tar.gz"
-  version "6.0.8"
-  sha256 "44bd24930071e1ed89b93f1b5e8298c891c28ea482bca208383ed866f81c868a"
+  url "https://github.com/schollz/croc/releases/download/v6.0.9/croc_6.0.9_macOS-64bit.tar.gz"
+  version "6.0.9"
+  sha256 "e8ac11a1b71698e380b9ab71c661a04af2273e8e28a0049b6bf2320c2f0a3a10"
 
   def install
     bin.install "croc"
