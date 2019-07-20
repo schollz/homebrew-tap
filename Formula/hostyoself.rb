@@ -2,9 +2,9 @@
 class Hostyoself < Formula
   desc "hostyoself lets you host your files using websockets from the command line or a browser."
   homepage "https://schollz.com/software/hostyoself/"
-  url "https://github.com/schollz/hostyoself/releases/download/v0.0.6/hostyoself_0.0.6_macOS-64bit.tar.gz"
-  version "0.0.6"
-  sha256 "ecbbad579dad848285c29653a1792cfd7269e2c505a1be254eec44cedd42c5d6"
+  url "https://github.com/schollz/hostyoself/releases/download/v1.0.0/hostyoself_1.0.0_macOS-64bit.tar.gz"
+  version "1.0.0"
+  sha256 "53764e8380836009e2b3c067c3ada75ac2faacc11933f5321cac63bc4f6488c0"
 
   def install
     bin.install "hostyoself"
