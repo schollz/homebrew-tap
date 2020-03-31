@@ -7,16 +7,16 @@ class Croc < Formula
 
   if OS.mac?
     url "https://github.com/schollz/croc/releases/download/v8.0.5/croc_8.0.5_macOS-64bit.tar.gz"
-    sha256 "ad911731549ea54084ef93c6a5b1728102f8afd4e7981da760383d0ffef4837d"
+    sha256 "e0e01cd007539876f31c3d3528b77fcc540ce0d005a3e05ff2cfe7ba6c4a7919"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/schollz/croc/releases/download/v8.0.5/croc_8.0.5_Linux-64bit.tar.gz"
-      sha256 "406da3eb9cda6f0ff358470d0824d72d0f2cc168497180a96c9e3ab05f4e0dbb"
+      sha256 "e8b790084629ca3b95249e7db55257c47dc2052e0441bd59656fcec1c4183f9f"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/schollz/croc/releases/download/v8.0.5/croc_8.0.5_Linux-ARM64.tar.gz"
-        sha256 "947173c254dfdbee4ac68ea63bcfa26ab3ac95912380bafd29f6194e29c24a51"
+        sha256 "d933c33bc19cbab916a67d4e6e79442ae87c92a7637a9b476c31fc99d5f48e86"
       else
       end
     end
