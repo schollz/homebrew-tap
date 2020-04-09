@@ -2,21 +2,21 @@
 class Croc < Formula
   desc "croc is a tool that allows any two computers to simply and securely transfer files and folders."
   homepage "https://schollz.com/software/croc/"
-  version "8.0.6"
+  version "8.0.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/schollz/croc/releases/download/v8.0.6/croc_8.0.6_macOS-64bit.tar.gz"
-    sha256 "c365b7db3aabf39ccd1fa66234a8dd696e15b707f150cb7883190fe73f38c6a4"
+    url "https://github.com/schollz/croc/releases/download/v8.0.7/croc_8.0.7_macOS-64bit.tar.gz"
+    sha256 "74ff50d0a32f15a22a21a5b14e31740b3ee184f5068d91637a5068e8be8fb622"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/schollz/croc/releases/download/v8.0.6/croc_8.0.6_Linux-64bit.tar.gz"
-      sha256 "0eabdb0ca0feec30f4e906f657e01046bc67bf399211bc81fedd3ef044701fa8"
+      url "https://github.com/schollz/croc/releases/download/v8.0.7/croc_8.0.7_Linux-64bit.tar.gz"
+      sha256 "fd066e7972453a0a4dd62c8d80d98feb50cf2e5fb05ca4b57a86ff79bb19ed42"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/schollz/croc/releases/download/v8.0.6/croc_8.0.6_Linux-ARM64.tar.gz"
-        sha256 "d20f5c0180627c927edc195b0d19da1cbb23042a7dbe625202f5aa34332f1a40"
+        url "https://github.com/schollz/croc/releases/download/v8.0.7/croc_8.0.7_Linux-ARM64.tar.gz"
+        sha256 "3967b563950613cafc5bf6cb2b74757a465aad73b53ae72bef4013245cd51571"
       else
       end
     end
