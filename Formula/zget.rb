@@ -2,21 +2,21 @@
 class Zget < Formula
   desc "zget is a tool that allows any two computers to simply and securely transfer files and folders."
   homepage "https://schollz.com/software/zget/"
-  version "1.1.5"
+  version "1.1.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/schollz/zget/releases/download/v1.1.5/zget_1.1.5_macOS-64bit.tar.gz"
-    sha256 "9e7f01dd7176bc81859c7d803d5dff1feb4b473a9c91e41eb4cbcfa11e86be97"
+    url "https://github.com/schollz/zget/releases/download/v1.1.6/zget_1.1.6_macOS-64bit.tar.gz"
+    sha256 "8cd9a3315f06b6a5fbcbc01dd66d030ce7d6da5912f3287afca3e85651838992"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/schollz/zget/releases/download/v1.1.5/zget_1.1.5_Linux-64bit.tar.gz"
-      sha256 "a49aaf13d9b907407d632f90293c33f3e6c7b8ab08a0318eb930c3a6514122b0"
+      url "https://github.com/schollz/zget/releases/download/v1.1.6/zget_1.1.6_Linux-64bit.tar.gz"
+      sha256 "20a362937ebe86fd168fe0d9c4750a32348b7eedaad7e0fef670b80037115d7b"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/schollz/zget/releases/download/v1.1.5/zget_1.1.5_Linux-ARM64.tar.gz"
-        sha256 "63c551a01bab0e0100c1d699cf4da6572bc5b88bd1d2f92a6cda9d800b406ccd"
+        url "https://github.com/schollz/zget/releases/download/v1.1.6/zget_1.1.6_Linux-ARM64.tar.gz"
+        sha256 "66de6c5ddaa72ec5c9e56b4ae02e2c832cc1a93d180addc2d476fe764c53d3d3"
       else
       end
     end
