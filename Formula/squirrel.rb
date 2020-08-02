@@ -2,9 +2,27 @@
 class Squirrel < Formula
   desc "squirrel downloads URLs to a SQLite database."
   homepage "https://schollz.com/software/squirrel/"
-  url "https://github.com/schollz/squirrel/releases/download/v1.0.6/squirrel_1.0.6_macOS-64bit.tar.gz"
-  version "1.0.6"
-  sha256 "b8cef0251f2d21c657e0196a83f44df0e9dc2d84a7ecfd8025ea4e7d6910f17b"
+  version "1.1.0"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/schollz/squirrel/releases/download/v1.1.0/squirrel_1.1.0_macOS-64bit.tar.gz"
+    sha256 "5b95ab9411440feb3bea7806190b152ee2d0f3ca3741174d15ca56c95546b019"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/schollz/squirrel/releases/download/v1.1.0/squirrel_1.1.0_Linux-64bit.tar.gz"
+      sha256 "b15db5d52f148909916698b3f1c9c1f32dbd82e75fced15403e7f65694f35a76"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/schollz/squirrel/releases/download/v1.1.0/squirrel_1.1.0_Linux-ARM64.tar.gz"
+        sha256 "338997c1aa152186134aa4730f50131d8128a9619ba6ed6879cdeda93b272c08"
+      else
+        url "https://github.com/schollz/squirrel/releases/download/v1.1.0/squirrel_1.1.0_Linux-ARM.tar.gz"
+        sha256 "10510cade72858a5107311f04a725cb5ac68b4f5aab1cb82c020d90b5587b120"
+      end
+    end
+  end
 
   def install
     bin.install "squirrel"
