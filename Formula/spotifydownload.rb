@@ -2,21 +2,21 @@
 class Spotifydownload < Formula
   desc "spotifydownload allows you to download playlists from Spotify."
   homepage "https://schollz.com/software/spotify/"
-  version "0.7.9"
+  version "0.7.11"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/schollz/spotifydownload/releases/download/v0.7.9/spotifydownload_0.7.9_macOS-64bit.tar.gz"
-    sha256 "e7601a7a2ff4c0bb1e2407063373b01f39f85acc2974e3ec519930b60ec6083f"
+    url "https://github.com/schollz/spotifydownload/releases/download/v0.7.11/spotifydownload_0.7.11_macOS-64bit.tar.gz"
+    sha256 "a905a694c7a1acb4ff25c3fa60f1b12937d7ce6964ca042e3e4d9390573e9868"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/schollz/spotifydownload/releases/download/v0.7.9/spotifydownload_0.7.9_Linux-64bit.tar.gz"
-      sha256 "c976bc3c86cbd1446e2e59ce020a65f092a39c17cc7148c2d72ca33cb9a29488"
+      url "https://github.com/schollz/spotifydownload/releases/download/v0.7.11/spotifydownload_0.7.11_Linux-64bit.tar.gz"
+      sha256 "33a8464cc3aadfd5d4897e99acb2aadaeb6bf08a71fb7990330a3061169160ba"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/schollz/spotifydownload/releases/download/v0.7.9/spotifydownload_0.7.9_Linux-ARM64.tar.gz"
-        sha256 "9c8781017ab3cb49524415d6336c3add73281ee97e22464f13ab84496671147f"
+        url "https://github.com/schollz/spotifydownload/releases/download/v0.7.11/spotifydownload_0.7.11_Linux-ARM64.tar.gz"
+        sha256 "5293ccb1348fab64202c50709e09bd8af33e43ef3c82f81cfc0e171e42265e73"
       else
       end
     end
