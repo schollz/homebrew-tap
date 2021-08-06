@@ -5,24 +5,29 @@
 class Croc < Formula
   desc "croc is a tool that allows any two computers to simply and securely transfer files and folders."
   homepage "https://schollz.com/software/croc/"
-  version "9.2.0"
+  version "9.2.1"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/schollz/croc/releases/download/v9.2.0/croc_9.2.0_macOS-64bit.tar.gz"
-    sha256 "02084b2e9e7d5934e8ce7eee6a11f57626e175d4642e5fb90416b26ce64df6c9"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/schollz/croc/releases/download/v9.2.1/croc_9.2.1_macOS-64bit.tar.gz"
+      sha256 "16e6d140d55ca8686b753a7edbaea14cd32f73875ce123bee67f09da6bbd55da"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/schollz/croc/releases/download/v9.2.1/croc_9.2.1_macOS-ARM64.tar.gz"
+      sha256 "d81e72b5b3b712b673604b545cc709ae157968d0c89d919d2d06caac2d8acbd8"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/schollz/croc/releases/download/v9.2.0/croc_9.2.0_macOS-ARM64.tar.gz"
-    sha256 "492316d6af27e796e62f51599028db2ed4420f4b7b61683b99971bc9b2509566"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/schollz/croc/releases/download/v9.2.0/croc_9.2.0_Linux-64bit.tar.gz"
-    sha256 "3e5599ab0ffdd2ceaef529082540817fb769a2990fbd5ef37d92bb7aca74e89c"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/schollz/croc/releases/download/v9.2.0/croc_9.2.0_Linux-ARM64.tar.gz"
-    sha256 "e15a4d6ed6cb4f6b09b3eb6181ae5e07ada05cec4bad5f2a6ba0a415d2187f6a"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/schollz/croc/releases/download/v9.2.1/croc_9.2.1_Linux-64bit.tar.gz"
+      sha256 "4c2fce797df383ee0bbd98064d291d7c0292dddeab157137b52aa0ae8a895618"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/schollz/croc/releases/download/v9.2.1/croc_9.2.1_Linux-ARM64.tar.gz"
+      sha256 "f89983717f46d861ac2af4138fddc576346c7321910e5d9049b45d31e6251d68"
+    end
   end
 
   def install
