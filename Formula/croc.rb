@@ -11,22 +11,22 @@ class Croc < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/schollz/croc/releases/download/v9.5.2/croc_9.5.2_macOS-64bit.tar.gz"
-      sha256 "421554b60922524d974a970acd843410326a14addb032029969e2e29d39c03a1"
+      sha256 "f132abd5abc54e11b3eb07f9c0a7dfe87cefd91baaf2731e5978a44a55d41556"
     end
     if Hardware::CPU.arm?
       url "https://github.com/schollz/croc/releases/download/v9.5.2/croc_9.5.2_macOS-ARM64.tar.gz"
-      sha256 "7e705605dbaf6bea237256d1a0b680730354f06df26eb76b186754c148ec9e0e"
+      sha256 "718df9ed196651a52fba16776c9baeeb0d467c0832ac887853b91cb368071225"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/schollz/croc/releases/download/v9.5.2/croc_9.5.2_Linux-64bit.tar.gz"
-      sha256 "36e89990ed70c373e32edc5c58b5564feae1fe4a011959cf4a90233cc921da54"
+      sha256 "1f65587f5e6326f1ee70226cc43d803987f7ab8321f25ccb725ca4d8d76054a6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/schollz/croc/releases/download/v9.5.2/croc_9.5.2_Linux-ARM64.tar.gz"
-      sha256 "8408b5f7298dbb992ae66775dee546be06e8db1523f79ea746c1346462157eba"
+      sha256 "a42f1bb2d74db7dcee737ab76bae2f5f2877651e67439f9803348d297dbf3eac"
     end
   end
 
