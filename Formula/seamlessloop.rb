@@ -5,11 +5,11 @@
 class Seamlessloop < Formula
   desc "seamlessloop is a tool to make seamless loops (requires sox)."
   homepage "https://schollz.com/software/seamlessloop/"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
-    url "https://github.com/schollz/seamlessloop/releases/download/v0.1.0/seamlessloop_0.1.0_macOS-64bit.tar.gz"
-    sha256 "e81642b158ecfb8dbe084869ce53410e7bafb4fcd5cb2acd57b81c473e479737"
+    url "https://github.com/schollz/seamlessloop/releases/download/v0.1.1/seamlessloop_0.1.1_macOS-64bit.tar.gz"
+    sha256 "89dec5d1e5b0c130277a6f65eaa57e3ca0f95d8ceb4fb2ae01a640f1cc2f5823"
 
     def install
       bin.install "seamlessloop"
@@ -28,8 +28,8 @@ class Seamlessloop < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/schollz/seamlessloop/releases/download/v0.1.0/seamlessloop_0.1.0_Linux-64bit.tar.gz"
-      sha256 "1b0e2711727e3ceb07e5ffb8767d126a89a221f64c2d61c79a8b0cb5bd993efb"
+      url "https://github.com/schollz/seamlessloop/releases/download/v0.1.1/seamlessloop_0.1.1_Linux-64bit.tar.gz"
+      sha256 "8183ef9cbed1f9b5c8344f347122261ce84b53448451026613560c751e2e8827"
 
       def install
         bin.install "seamlessloop"
