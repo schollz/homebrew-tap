@@ -5,29 +5,44 @@
 class Croc < Formula
   desc "croc is a tool that allows any two computers to simply and securely transfer files and folders."
   homepage "https://schollz.com/software/croc/"
-  version "9.6.0"
-  bottle :unneeded
+  version "9.6.1"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/schollz/croc/releases/download/v9.6.1/croc_9.6.1_macOS-ARM64.tar.gz"
+      sha256 "f287dc7365aa5a32d88eddf6d7c3e69fa5373e9dcdd82ac09477920989e41bff"
+
+      def install
+        bin.install "croc"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/schollz/croc/releases/download/v9.6.0/croc_9.6.0_macOS-64bit.tar.gz"
-      sha256 "d9781d82f5a19c60ddb42d2ad82628a3b1dca67ee0ef04415f08bdb6572f9fef"
+      url "https://github.com/schollz/croc/releases/download/v9.6.1/croc_9.6.1_macOS-64bit.tar.gz"
+      sha256 "760400a4597a371043ad3e3de0c7ba8211d5731b1265400dff7f6d9b8bb23ebf"
+
+      def install
+        bin.install "croc"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/schollz/croc/releases/download/v9.6.0/croc_9.6.0_Linux-64bit.tar.gz"
-      sha256 "a9dbb7e3b8e3c286b2fe51a9f4fdbc2c0404d9bb2439baf85133e5e1c22a26b5"
+      url "https://github.com/schollz/croc/releases/download/v9.6.1/croc_9.6.1_Linux-64bit.tar.gz"
+      sha256 "69362723d1931604ff8838ae1633f996dd7c9acbcac7c2e29830cb30ba480841"
+
+      def install
+        bin.install "croc"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/schollz/croc/releases/download/v9.6.0/croc_9.6.0_Linux-ARM64.tar.gz"
-      sha256 "358b9e4d0c0132b54503757b2769b14b77fc91855ef1018cf4559293522e2038"
-    end
-  end
+      url "https://github.com/schollz/croc/releases/download/v9.6.1/croc_9.6.1_Linux-ARM64.tar.gz"
+      sha256 "c89347a90700fd2efa1bab7588f7338cc91b81e9b243390e4b84a957a698a326"
 
-  def install
-    bin.install "croc"
+      def install
+        bin.install "croc"
+      end
+    end
   end
 
   test do
