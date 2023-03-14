@@ -5,20 +5,20 @@
 class Croc < Formula
   desc "croc is a tool that allows any two computers to simply and securely transfer files and folders."
   homepage "https://schollz.com/software/croc/"
-  version "9.6.1"
+  version "9.6.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/schollz/croc/releases/download/v9.6.1/croc_9.6.1_macOS-ARM64.tar.gz"
-      sha256 "f287dc7365aa5a32d88eddf6d7c3e69fa5373e9dcdd82ac09477920989e41bff"
+    if Hardware::CPU.intel?
+      url "https://github.com/schollz/croc/releases/download/v9.6.4/croc_9.6.4_macOS-64bit.tar.gz"
+      sha256 "a9d800f7da851c6d3a8f459cb224def787b12c94bd1799c20bd213d549f19882"
 
       def install
         bin.install "croc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/schollz/croc/releases/download/v9.6.1/croc_9.6.1_macOS-64bit.tar.gz"
-      sha256 "760400a4597a371043ad3e3de0c7ba8211d5731b1265400dff7f6d9b8bb23ebf"
+    if Hardware::CPU.arm?
+      url "https://github.com/schollz/croc/releases/download/v9.6.4/croc_9.6.4_macOS-ARM64.tar.gz"
+      sha256 "0e0c129e1ba233e8d9a0b74b84cbf23b5e6a162786a936ca9e0ad0eee8d5b6a6"
 
       def install
         bin.install "croc"
@@ -28,16 +28,16 @@ class Croc < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/schollz/croc/releases/download/v9.6.1/croc_9.6.1_Linux-64bit.tar.gz"
-      sha256 "69362723d1931604ff8838ae1633f996dd7c9acbcac7c2e29830cb30ba480841"
+      url "https://github.com/schollz/croc/releases/download/v9.6.4/croc_9.6.4_Linux-64bit.tar.gz"
+      sha256 "dfc852ae3f897c23994cc2b167b35d56fc5274f809eaae806bf9d4a02d431ee2"
 
       def install
         bin.install "croc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/schollz/croc/releases/download/v9.6.1/croc_9.6.1_Linux-ARM64.tar.gz"
-      sha256 "c89347a90700fd2efa1bab7588f7338cc91b81e9b243390e4b84a957a698a326"
+      url "https://github.com/schollz/croc/releases/download/v9.6.4/croc_9.6.4_Linux-ARM64.tar.gz"
+      sha256 "54f804e55a7e928c9143958c5544b35bf86dc98008dc9ffff2072337295ee774"
 
       def install
         bin.install "croc"
