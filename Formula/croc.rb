@@ -5,20 +5,20 @@
 class Croc < Formula
   desc "croc is a tool that allows any two computers to simply and securely transfer files and folders."
   homepage "https://schollz.com/software/croc/"
-  version "9.6.4"
+  version "9.6.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/schollz/croc/releases/download/v9.6.4/croc_9.6.4_macOS-ARM64.tar.gz"
-      sha256 "f1e4efbb98e244c6df8b18dd8318b98b4758f19998baed01ee43aa35d6f28844"
+      url "https://github.com/schollz/croc/releases/download/v9.6.5/croc_9.6.5_macOS-ARM64.tar.gz"
+      sha256 "a220f9cb82b4de2deb6820493790f6d49074e9e9f4d615a06a3fa82cf4fe5260"
 
       def install
         bin.install "croc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/schollz/croc/releases/download/v9.6.4/croc_9.6.4_macOS-64bit.tar.gz"
-      sha256 "b7dc7361d9b6cad79b5a7424186c202cca24c532680d873e9172a8c55686ba88"
+      url "https://github.com/schollz/croc/releases/download/v9.6.5/croc_9.6.5_macOS-64bit.tar.gz"
+      sha256 "716af38bbdf4a50fa8949af2cdf25cac2d97ca300e21412bd1c7ff838f540278"
 
       def install
         bin.install "croc"
@@ -28,16 +28,16 @@ class Croc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/schollz/croc/releases/download/v9.6.4/croc_9.6.4_Linux-ARM64.tar.gz"
-      sha256 "60bfdff2c9752eadeaa1d393bcb34ca16a7e081e616b3f4d9a041c52df5b4eb8"
+      url "https://github.com/schollz/croc/releases/download/v9.6.5/croc_9.6.5_Linux-ARM64.tar.gz"
+      sha256 "fde9df7a68a558c77e83bfd217fa311dc4cbabf8e78f4f305459a647be9c8079"
 
       def install
         bin.install "croc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/schollz/croc/releases/download/v9.6.4/croc_9.6.4_Linux-64bit.tar.gz"
-      sha256 "6344571a66098eea0ce9cb68f927f3abe612533494e24d150c54cc79925f5d4c"
+      url "https://github.com/schollz/croc/releases/download/v9.6.5/croc_9.6.5_Linux-64bit.tar.gz"
+      sha256 "8f300a05eec78878b210d1e213eb776ebbf764ad289bd740fa0eba8efc7edcac"
 
       def install
         bin.install "croc"
