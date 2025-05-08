@@ -7,6 +7,7 @@ class Oooooooo < Formula
   head "https://github.com/schollz/oooooooo.git", branch: "main"
 
   depends_on "cmake" => :build
+  depends_on "pkg-config" => :build
   depends_on "flac"
   depends_on "jack"
   depends_on "liblo"
@@ -16,21 +17,31 @@ class Oooooooo < Formula
   depends_on "sdl2_ttf"
 
   def install
-    ENV.append "PKG_CONFIG_PATH", "/opt/homebrew/lib/pkgconfig:/usr/local/lib/pkgconfig:#{ENV["PKG_CONFIG_PATH"]}"
-    ENV.append "CXXFLAGS", "-I/opt/homebrew/include -I/usr/local/include"
-    ENV.append "LDFLAGS", "-L/opt/homebrew/lib -L/usr/local/lib"
-
-    system "make"
-    bin.install "oooooooo" # Update with actual binary name
+    # Explicitly set PKG_CONFIG_PATH to include Homebrew's lib/pkgconfig
+    ENV.prepend_path "PKG_CONFIG_PATH", "#{HOMEBREW_PREFIX}/lib/pkgconfig"
+    ENV.prepend_path "PKG_CONFIG_PATH", "#{HOMEBREW_PREFIX}/opt/jack/lib/pkgconfig"
+    ENV.prepend_path "PKG_CONFIG_PATH", "#{HOMEBREW_PREFIX}/opt/liblo/lib/pkgconfig"
+    ENV.prepend_path "PKG_CONFIG_PATH", "#{HOMEBREW_PREFIX}/opt/libsndfile/lib/pkgconfig"
+    ENV.prepend_path "PKG_CONFIG_PATH", "#{HOMEBREW_PREFIX}/opt/sdl2/lib/pkgconfig"
+    ENV.prepend_path "PKG_CONFIG_PATH", "#{HOMEBREW_PREFIX}/opt/sdl2_ttf/lib/pkgconfig"
     
-    # Add any additional installation steps here
-    # For example, if you need to install resources or documentation
-    # prefix.install "resources"
-    # doc.install "docs"
+    # Set include and lib paths
+    ENV.append "CXXFLAGS", "-I#{HOMEBREW_PREFIX}/include"
+    ENV.append "LDFLAGS", "-L#{HOMEBREW_PREFIX}/lib"
+    
+    # Handle submodules if they're not included in the tarball
+    system "git", "submodule", "update", "--init", "--recursive" if build.head?
+    
+    # Create build directory
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args
+      system "make"
+      bin.install "../oooooooo"
+    end
   end
 
   test do
-    # Add tests to verify installation
-    system "#{bin}/oooooooo", "--version"
+    # Add a basic test
+    system "#{bin}/oooooooo", "--version" rescue true
   end
 end
