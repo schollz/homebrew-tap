@@ -36,8 +36,7 @@ class Oooooooo < Formula
     mkdir "build" do
       system "cmake", "..", *std_cmake_args
       system "make"
-      bin.install "../oooooooo"
-    end
+      bin.install "clients/oooooooo/oooooooo"    end
   end
 
   test do
