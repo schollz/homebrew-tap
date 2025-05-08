@@ -1,8 +1,8 @@
 class Oooooooo < Formula
   desc "Audio application by schollz"
   homepage "https://github.com/schollz/oooooooo"
-  url "https://github.com/schollz/oooooooo/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "fd2660f981870884b4063f9e8cf9f9728b1a298fcc6eb3bd3802ac6b2126d23b"
+  url "https://github.com/schollz/oooooooo/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "80c19522b22d5946a2a72a3c49d2199141146b1b632a69b0831ba54fdb53c79e"
   license "MIT" # Update with actual license
   head "https://github.com/schollz/oooooooo.git", branch: "main"
 
