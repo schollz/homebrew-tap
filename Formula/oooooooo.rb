@@ -1,8 +1,8 @@
 class Oooooooo < Formula
   desc "Digital Tape Loops"
   homepage "https://github.com/schollz/oooooooo"
-  url "https://github.com/schollz/oooooooo/archive/refs/tags/v0.1.6.tar.gz"
-  sha256 "dd601e890356ae3c967a822cf9f5f034e6049f804d5d92634806c841ce71cc40"
+  url "https://github.com/schollz/oooooooo/archive/refs/tags/v0.1.7.tar.gz"
+  sha256 "9efce23f20596624e6ace22af9f5cf8512ad8bd4b7406a74625c55469f091309"
   license "MIT" # Update with actual license
   head "https://github.com/schollz/oooooooo.git", branch: "main"
 
