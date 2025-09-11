@@ -1,9 +1,9 @@
-class Twon < Formula
+class TwoN < Formula
   desc "Musical performance tool for live coding and improvisation"
   homepage "https://github.com/schollz/2n"
-  url "https://github.com/schollz/2n/releases/download/v2.0.2/source_code_vendored.tar.gz"
-  sha256 "0324daf8ba44da3b461dcce775add28806e190ea32b848f7adcbe9b0a99f4464"
-  version "2.0.2"
+  url "https://github.com/schollz/2n/releases/download/v2.0.3/source_code_vendored.tar.gz"
+  sha256 "516c650590ea0d1cb2454c0b4d60a59c42adeec043d2c9ccd4f3b21f30bc2904"
+  version "2.0.3"
   license "MIT"
 
   depends_on "go" => :build
