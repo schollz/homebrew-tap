@@ -1,9 +1,9 @@
 class Tune < Formula
   desc "Musical performance tool for live coding and improvisation"
   homepage "https://github.com/schollz/2n"
-  url "https://github.com/schollz/2n/releases/download/v2.0.5/source_code_vendored.tar.gz"
-  sha256 "5a144416390006f5e75d9af477a1694ad88553480c95847560728b3797b83912"
-  version "2.0.5"
+  url "https://github.com/schollz/2n/releases/download/v2.0.1/source_code_vendored.tar.gz"
+  sha256 "753733629e0a66482b3d32cbe9911d88445284e4f08d19c5bd44f597178ecbe7"
+  version "2.0.1"
   license "MIT"
 
   depends_on "go" => :build
