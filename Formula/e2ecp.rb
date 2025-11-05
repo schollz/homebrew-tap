@@ -1,9 +1,9 @@
 class E2ecp < Formula
   desc "Secure E2E encrypted file transfer using ECDH and AES-GCM"
   homepage "https://github.com/schollz/e2ecp"
-  url "https://github.com/schollz/e2ecp/releases/download/v3.0.4/source_code_vendored.tar.gz"
-  sha256 "9e6e391e6086168e18efbc201318003684ba78ef633d4126800b01eb4c11b730"
-  version "3.0.4"
+  url "https://github.com/schollz/e2ecp/releases/download/v3.0.5/source_code_vendored.tar.gz"
+  sha256 "ac2714689beae4e88ebb2fdc60f85820cf4ea202adbcf3acd35e80992c215c0a"
+  version "3.0.5"
   license "MIT"
 
   depends_on "go" => :build
