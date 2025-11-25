@@ -1,9 +1,9 @@
 class Collidertracker < Formula
   desc "Musical performance tool for live coding and improvisation"
   homepage "https://github.com/schollz/collidertracker"
-  url "https://github.com/schollz/collidertracker/releases/download/v4.5.2/source_code_vendored.tar.gz"
-  sha256 "53723cd6267bbc9db2595bbb154ec345866faaae4dc9423148b3128386398815"
-  version "4.5.2"
+  url "https://github.com/schollz/collidertracker/releases/download/v4.5.3/source_code_vendored.tar.gz"
+  sha256 "855a5ef6a317677247bc58f3845082c86dba57fc0ac04f6d740bf058d5c86f04"
+  version "4.5.3"
   license "MIT"
 
   depends_on "go" => :build
